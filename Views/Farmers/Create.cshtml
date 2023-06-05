@@ -1,0 +1,53 @@
+﻿@model FarmCentral2.Models.Farmers
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Farmers</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Fname" class="control-label"></label>
+                <input asp-for="Fname" class="form-control" />
+                <span asp-validation-for="Fname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fsurname" class="control-label"></label>
+                <input asp-for="Fsurname" class="form-control" />
+                <span asp-validation-for="Fsurname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Femail" class="control-label"></label>
+                <input asp-for="Femail" class="form-control" />
+                <span asp-validation-for="Femail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fusername" class="control-label"></label>
+                <input asp-for="Fusername" class="form-control" />
+                <span asp-validation-for="Fusername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fpassword" class="control-label"></label>
+                <input asp-for="Fpassword" class="form-control" />
+                <span asp-validation-for="Fpassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
